@@ -509,10 +509,10 @@ void loop() {
   Serial.println(" in");      //print units after the distance
 
   if (2 < distance && distance <= 5) {                     //if little wolf is close
+    roar(); //granny wolf roar
     delay(1000);
     door.write(180); //flip the door servo 180 degree. need find a way to make it stay
     shakeGirl(); //shake the bed
-  //  roar(); //granny wolf roar
     emoji_animation();
   }
   else{
@@ -569,18 +569,12 @@ void shakeGirl()
 
 void roar() //granny wolf roar
 {
-  tone(buzzerPin, 70, 2000);         //buzz the buzzer pin
-  delay(100);                   //wait 1000 milliseconds
-
-  tone(buzzerPin, 80, 2000);         //buzz the buzzer pin
-  delay(200);                   //wait 1000 milliseconds
-
-  tone(buzzerPin, 90, 2000);         //buzz the buzzer pin
-  delay(300);                   //wait 1000 milliseconds
-
-  noTone(buzzerPin);            //turn the buzzer off
-  delay(1000);                   //wait 1000 milliseconds
-  while (true) {} //get stuck in this loop forever so that the wolf only roar once
+for (int i=0; i<=1; i++){
+  play('G', 1);
+  play('G', 1);
+  play('G', 1);
+  play('E', 2);
+}
 }
 
 void moveWolf()
