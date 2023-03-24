@@ -508,7 +508,7 @@ void loop() {
   Serial.print(distance);     //print the distance that was measured
   Serial.println(" in");      //print units after the distance
 
-  if (2 < distance && distance <= 5) {                     //if little wolf is close
+  if (1 < distance && distance <= 8) {                     //if little wolf is close
     roar(); //granny wolf roar
     delay(1000);
     door.write(180); //flip the door servo 180 degree. need find a way to make it stay
