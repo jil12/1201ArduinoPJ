@@ -4,7 +4,7 @@
 #include <Adafruit_SSD1306.h>
 #include <Servo.h>                //include the servo library
 
-Adafruit_SSD1306 display(128, 64, &Wire); //Vin to 5V, GND to GND, SCL to A5, SDA to A4
+Adafruit_SSD1306 display(128, 64, &Wire);  //Vin to 5V, GND to GND, SCL to A5, SDA to A4
 
 const int trigPin = 11;           //connects to the trigger pin on the distance sensor
 const int echoPin = 12;           //connects to the echo pin on the distance sensor
