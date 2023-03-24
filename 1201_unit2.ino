@@ -569,12 +569,12 @@ void shakeGirl()
 
 void roar() //granny wolf roar
 {
-for (int i=0; i<=1; i++){
-  play('G', 1);
-  play('G', 1);
-  play('G', 1);
-  play('E', 2);
-}
+  for (int i=0; i<1; i++){
+    play('G', 1);
+    play('G', 1);
+    play('G', 1);
+    play('E', 2);
+  }
 }
 
 void moveWolf()
